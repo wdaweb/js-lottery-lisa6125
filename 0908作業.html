@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+      for (let i = 0; i < 6; i++) {
+        let num = Math.floor(Math.random() * 38) + 1;
+        document.write(`A區:${num}<br>`);
+        array.push(num);
+        for (let j = 0; j < array.length; j++) {
+          if (i !== j && array[i] === array[j]) {
+            i--;
+          }
+        }
+      }
+      console.log(array);
+      document.write(`B區:${Math.floor(Math.random() * 8) + 1}`);
+    </script>
+  </body>
+</html>
